@@ -24,18 +24,15 @@
                 </LinearGradientBrush>
             </DataGrid.Background>
             <DataGrid.Columns>
-                <!-- Asiento -->
-                <DataGridTextColumn Header="Asiento" Binding="{Binding Asiento}" />
+                
                 <!-- Fecha -->
                 <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
                 <!-- Cuenta -->
                 <DataGridTextColumn Header="Cuenta" Binding="{Binding Cuenta}" />
-                <!-- Monto -->
-                <DataGridTextColumn Header="Monto" Binding="{Binding Monto}" />
                 <!-- Debe -->
-                <DataGridCheckBoxColumn Header="Debe" Binding="{Binding Debe}" />
+                <DataGridCheckBoxColumn Header="Debe" Binding="{Binding Monto}" />
                 <!-- Haber -->
-                <DataGridCheckBoxColumn Header="Haber" Binding="{Binding Haber}" />
+                <DataGridCheckBoxColumn Header="Haber" Binding="{Binding Monto}" />
             </DataGrid.Columns>
         </DataGrid>
 

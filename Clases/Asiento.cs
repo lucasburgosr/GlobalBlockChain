@@ -16,6 +16,7 @@ public class Asiento
 
     public string Movimiento { get; set; }
     
+    public bool DebeHaber { get; set; }
 
     public DateTime Fecha { get; set; }
     
@@ -25,13 +26,14 @@ public class Asiento
     {
     }
 
-    public Asiento(string cuenta, double monto, string movimiento, DateTime fecha, TipoCuenta tipoCuenta)
+    public Asiento(string cuenta, double monto, string movimiento, DateTime fecha, TipoCuenta tipoCuenta, bool debeHaber)
     {
         Cuenta = cuenta;
         Monto = monto;
         Movimiento = movimiento;
         Fecha = fecha;
         TipoCuenta = tipoCuenta;
+        DebeHaber = debeHaber;
     }
     
 
