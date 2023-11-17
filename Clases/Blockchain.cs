@@ -31,7 +31,7 @@ public class Blockchain
         _blocks.Add(genesisBlock);
     }
 
-    public void AgregarBloque(Asiento data)
+    /*public void AgregarBloque(Asiento data)
     {
         Bloque ultimoBloque = ObtenerUltimoBloque();
         int index = _blocks.Count;
@@ -51,6 +51,51 @@ public class Blockchain
 
         // Serializar y persistir la lista de bloques en un archivo .json
         GuardarBlockchainEnArchivo();
+    }*/
+    
+    public void AgregarBloque(Asiento data)
+    {
+        // Cargar la información existente desde el archivo
+        CargarBlockchainDesdeArchivo();
+
+        Bloque ultimoBloque = ObtenerUltimoBloque();
+        int index = _blocks.Count;
+
+        DateTime timestamp = DateTime.Now;
+        string previousHash = ultimoBloque.Hash;
+
+        // Crear un bloque con un asiento y otros datos
+        Bloque nuevoBloque = new Bloque(timestamp, "Nuevo bloque", previousHash)
+        {
+            Index = index,
+            // Otras propiedades del bloque que puedas necesitar
+            Data = data
+        };
+
+        _blocks.Add(nuevoBloque);
+
+        // Serializar y persistir la lista de bloques en un archivo .json
+        GuardarBlockchainEnArchivo();
+    }
+    
+    private static void CargarBlockchainDesdeArchivo()
+    {
+        string rutaArchivo = "blockchain.json";
+
+        try
+        {
+            // Leer el JSON desde el archivo
+            string jsonBlockchain = File.ReadAllText(rutaArchivo);
+
+            // Deserializar el JSON a una lista de bloques
+            _blocks = JsonSerializer.Deserialize<List<Bloque>>(jsonBlockchain);
+
+            Console.WriteLine("Blockchain cargada desde el archivo blockchain.json");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al cargar la blockchain desde el archivo: {ex.Message}");
+        }
     }
 
     public Bloque ObtenerUltimoBloque()
@@ -63,7 +108,7 @@ public class Blockchain
         return null;
     }
 
-    private void GuardarBlockchainEnArchivo()
+    private static void GuardarBlockchainEnArchivo()
     {
         string rutaArchivo = "blockchain.json";
 
