@@ -12,28 +12,9 @@ namespace GlobalLabIII.Services
 {
     public class AsientoService
     {
-        private const string RutaArchivoBlockchain = "blockchain.txt";
-
-        public static void CrearBlockchain()
+        public static Asiento CrearAsiento(string cuenta, double monto, string movimiento, DateTime fecha)
         {
-            // Crear un bloque génesis
-            var bloqueGenesis = new Bloque(0, DateTime.Now, "Bloque Génesis", string.Empty);
-
-            // Guardar el bloque génesis en el archivo
-            GuardarBloqueGenesisEnArchivo(bloqueGenesis);
-        }
-
-        public static Asiento CrearAsiento(string cuenta, double monto, string movimiento, DateTime fecha, string cifrado)
-        {
-            // Obtener el último bloque en la cadena
-            var ultimoBloque = ObtenerUltimoBloque();
-
-            // Crear un nuevo bloque con los datos del asiento
-            var nuevoBloque = new Bloque(ultimoBloque.Numero + 1, DateTime.Now, $"{cuenta}-{monto}-{movimiento}-{fecha}", ultimoBloque.HashActual);
-
-            // Guardar el nuevo bloque en el archivo
-            GuardarBloqueEnArchivo(nuevoBloque,cifrado);
-
+            global::Blockchain blockchain = new global::Blockchain();
             // Inicializamos por defecto en Activo
             TipoCuenta tipo = TipoCuenta.ACTIVO;
 
@@ -59,33 +40,9 @@ namespace GlobalLabIII.Services
             }
 
             // Crear y registrar el asiento en la base de datos
-            Asiento asiento = new Asiento(cuenta, monto, movimiento, fecha, tipo,cifrado);
+            Asiento asiento = new Asiento(cuenta, monto, movimiento, fecha, tipo);
 
-            MySqlConnection conexion = null;
-
-            try
-            {
-                // Abrir la conexión
-                conexion = DatabaseConfig.Conectar();
-
-                // Verificar que la conexión esté abierta
-                if (conexion == null || conexion.State != System.Data.ConnectionState.Open)
-                {
-                    Console.WriteLine("No se pudo abrir la conexión.");
-                    return null;
-                }
-
-                // Llamar a un método de DataAccess para registrar el asiento
-                DataAccess.registrarAsiento(conexion, asiento);
-            }
-            finally
-            {
-                // Asegurarse de cerrar la conexión, incluso si hay errores
-                if (conexion != null)
-                {
-                    DatabaseConfig.Desconectar(conexion);
-                }
-            }
+            blockchain.AgregarBloque(asiento);
 
             return asiento;
         }
@@ -161,48 +118,8 @@ namespace GlobalLabIII.Services
             return balance;
         }
 
-        private static Bloque ObtenerUltimoBloque()
-        {
-            // Leer el archivo y obtener el último bloque
-            var lineas = File.ReadAllLines(RutaArchivoBlockchain);
+        
 
-            if (lineas.Length > 0)
-            {
-                var ultimaLinea = lineas[lineas.Length - 1];
-                var partes = ultimaLinea.Split('|');
-                return new Bloque(
-                    int.Parse(partes[0]),
-                    DateTime.Parse(partes[1]),
-                    partes[2],
-                    partes[3]
-                );
-            }
-            else
-            {
-                // Si no hay bloques, crear la cadena de bloques con el bloque génesis
-                CrearBlockchain();
-                return new Bloque(0, DateTime.Now, "Bloque Génesis", string.Empty);
-            }
-        }
-
-        private static void GuardarBloqueEnArchivo(Bloque bloque, string claveCifrado)
-        {
-            // Cifrar los datos antes de almacenarlos
-            string datosCifrados = bloque.CifrarDatos(claveCifrado);
-
-            // Crear el formato de cadena para el bloque
-            var cadenaBloque = $"{bloque.Numero}|{bloque.FechaCreacion}|{datosCifrados}|{bloque.HashAnterior}|{bloque.HashActual}";
-
-            // Agregar la cadena del bloque al archivo
-            File.AppendAllLines(RutaArchivoBlockchain, new[] { cadenaBloque }, Encoding.UTF8);
-        }
-        private static void GuardarBloqueGenesisEnArchivo(Bloque bloque)
-        {
-            // Crear el formato de cadena para el bloque
-            var cadenaBloque = $"{bloque.Numero}|{bloque.FechaCreacion}|{bloque.Datos}|{bloque.HashAnterior}|{bloque.HashActual}";
-
-            // Agregar la cadena del bloque al archivo
-            File.AppendAllLines(RutaArchivoBlockchain, new[] { cadenaBloque }, Encoding.UTF8);
-        }
+        
     }
 }

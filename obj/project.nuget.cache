@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "QAxHYRnpXooPmyXijd0Yba1spD24osSCxmrTvGrU1QcNN45S5/PRA6ACN9w4UotKRzlUjpdf7rNU6CD+WU6mzQ==",
-  "success": true,
-  "projectFilePath": "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\GlobalLabIII.csproj",
-=======
   "dgSpecHash": "azwbYJuHfWM8gFg26uenuHw/Z28lhrMjVEHy9zfJQDZ0eVmZX36isW6EZOi1J8UNASRcBiHIo6/ZUZG/g3Pz+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj",
->>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\Lucia\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Lucia\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
@@ -48,7 +42,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

@@ -1,0 +1,25 @@
+[
+  {
+    "Index": 0,
+    "Timestamp": "2023-11-17T13:19:53.3033576-03:00",
+    "PreviousHash": "0",
+    "Hash": "4b5c04b80502610e0db4292532853f92fe5f28b04f18cccc3444c921e4038aeb",
+    "Mensaje": "Bloque genesis",
+    "Data": null
+  },
+  {
+    "Index": 1,
+    "Timestamp": "2023-11-17T13:19:53.3034383-03:00",
+    "PreviousHash": "4b5c04b80502610e0db4292532853f92fe5f28b04f18cccc3444c921e4038aeb",
+    "Hash": "784f0b0283bc7579df90f7247cf83eaad60deb1b2ffbe38745a1399365749513",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "BANCO C/C",
+      "Monto": 2,
+      "Movimiento": "Egreso",
+      "Fecha": "2023-11-14T00:00:00",
+      "TipoCuenta": 0
+    }
+  }
+]
