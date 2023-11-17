@@ -50,10 +50,9 @@
            <!-- Botón "Plan de Cuentas" -->
            <Button Content="Plan de Cuentas" Style="{StaticResource LilaButton}" Click="btnPlanDeCuentas_Click"/>
            
+           <!-- Botón "Ver libro diario" -->
+           <Button Content="Ver Libro Diario" Style="{StaticResource LilaButton}" Click="btnVerLibroDiario_Click"/>
        </StackPanel>
-
-
-      
    </Grid>
 </Window>
 

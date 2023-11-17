@@ -19,7 +19,7 @@ namespace GlobalLabIII
             DateTime fechaInicio = datePickerInicio.SelectedDate ?? DateTime.MinValue;
             DateTime fechaFin = datePickerFin.SelectedDate ?? DateTime.MaxValue;
 
-            double balance = AsientoService.ConsultarLibroMayor(fechaInicio, fechaFin);
+            double balance = AsientoService.consultarLibroMayor(fechaInicio, fechaFin);
             
             MessageBox.Show($"Consulta realizada desde {fechaInicio.ToShortDateString()} hasta {fechaFin.ToShortDateString()} \nBalance Total: $" + balance, "Consulta Exitosa");
         }
