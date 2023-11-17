@@ -15,6 +15,8 @@ public class Asiento
     public double Monto { get; set; }
 
     public string Movimiento { get; set; }
+    
+    public string claveCifrado { get; set; }
 
     public DateTime Fecha { get; set; }
     
@@ -24,13 +26,14 @@ public class Asiento
     {
     }
 
-    public Asiento(string cuenta, double monto, string movimiento, DateTime fecha, TipoCuenta tipoCuenta)
+    public Asiento(string cuenta, double monto, string movimiento, DateTime fecha, TipoCuenta tipoCuenta, String claveCifrado)
     {
         Cuenta = cuenta;
         Monto = monto;
         Movimiento = movimiento;
         Fecha = fecha;
         TipoCuenta = tipoCuenta;
+        claveCifrado = claveCifrado;
     }
     
 

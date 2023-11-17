@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 using GlobalLabIII.Clases;
 using GlobalLabIII.Services;
 using WpfApp;
@@ -30,4 +31,14 @@ public partial class PlanDeCuentasWindow : Window
         mainWindow.Show();
         Close(); // Cierra la ventana actual
     }
+    
+    private void listBoxCuentas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (listBoxCuentas.SelectedItem != null)
+        {
+            Cuenta cuentaSeleccionada = (Cuenta)listBoxCuentas.SelectedItem;
+            MessageBox.Show($"        {cuentaSeleccionada.TipoCuentaNombre}", "Tipo de Cuenta");
+        }
+    }
+
 }

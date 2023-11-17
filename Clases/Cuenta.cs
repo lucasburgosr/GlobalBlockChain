@@ -13,4 +13,10 @@ public class Cuenta
 
     public TipoCuenta TipoCuenta { get; set; }
     
+    public string TipoCuentaString { get; set; }
+    
+    public string TipoCuentaNombre
+    {
+        get { return Enum.GetName(typeof(TipoCuenta), TipoCuenta); }
+    }
 }

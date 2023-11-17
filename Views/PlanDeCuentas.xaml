@@ -12,27 +12,31 @@
        </Grid.Background>
       
        <!-- Label "El buen sabor" -->
-       <Label Content="Cuentas" FontSize="30" FontWeight="Bold" FontFamily="Georgia" Foreground="#148D8D" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"/>
-
+       <Label Content="CUENTAS" FontSize="30" FontWeight="Bold" FontFamily="Georgia" Foreground="#148D8D" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"/>
 
        <ListBox x:Name="listBoxCuentas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,70"
-                BorderBrush="Black" BorderThickness="1">
-           <ListBox.Background>
-               <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                   <GradientStop Color="#0E2C40" Offset="0"/> <!-- Violeta más oscuro -->
-                   <GradientStop Color="#1A4A5A" Offset="1"/> <!-- Lila más claro -->
-               </LinearGradientBrush>
-           </ListBox.Background>
-           <ListBox.ItemTemplate>
-               <DataTemplate>
-                   <StackPanel>
-                       <TextBlock Text="{Binding Nombre}" FontSize="18" FontFamily="Times New Roman"/>
-                       <!-- Otros campos que desees mostrar -->
-                   </StackPanel>
-               </DataTemplate>
-           </ListBox.ItemTemplate>
-       </ListBox>
-
+            BorderBrush="Black" BorderThickness="1" SelectionChanged="listBoxCuentas_SelectionChanged">
+            <ListBox.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#0E2C40" Offset="0"/> <!-- Violeta más oscuro -->
+                    <GradientStop Color="#1A4A5A" Offset="1"/> <!-- Lila más claro -->
+                </LinearGradientBrush>
+            </ListBox.Background>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Nombre}" FontSize="18" FontWeight="Bold" Foreground="White" FontFamily="Times New Roman">
+                            <TextBlock.ToolTip>
+                                <ToolTip>
+                                    <TextBlock Text="{Binding TipoCuentaNombre}" FontSize="14" Foreground="Black" FontFamily="Times New Roman"/>
+                                </ToolTip>
+                            </TextBlock.ToolTip>
+                        </TextBlock>
+                        <!-- Otros campos que desees mostrar -->
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
        <!-- Botón Volver -->
        <Button Content="Volver" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Margin="0,0,0,20" Click="btnVolver_Click">

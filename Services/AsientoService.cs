@@ -23,7 +23,7 @@ namespace GlobalLabIII.Services
             GuardarBloqueGenesisEnArchivo(bloqueGenesis);
         }
 
-        public static Asiento CrearAsiento(string cuenta, double monto, string movimiento, DateTime fecha, string claveCifrado)
+        public static Asiento CrearAsiento(string cuenta, double monto, string movimiento, DateTime fecha, string cifrado)
         {
             // Obtener el último bloque en la cadena
             var ultimoBloque = ObtenerUltimoBloque();
@@ -32,7 +32,7 @@ namespace GlobalLabIII.Services
             var nuevoBloque = new Bloque(ultimoBloque.Numero + 1, DateTime.Now, $"{cuenta}-{monto}-{movimiento}-{fecha}", ultimoBloque.HashActual);
 
             // Guardar el nuevo bloque en el archivo
-            GuardarBloqueEnArchivo(nuevoBloque,claveCifrado);
+            GuardarBloqueEnArchivo(nuevoBloque,cifrado);
 
             // Inicializamos por defecto en Activo
             TipoCuenta tipo = TipoCuenta.ACTIVO;
@@ -59,7 +59,7 @@ namespace GlobalLabIII.Services
             }
 
             // Crear y registrar el asiento en la base de datos
-            Asiento asiento = new Asiento(cuenta, monto, movimiento, fecha, tipo);
+            Asiento asiento = new Asiento(cuenta, monto, movimiento, fecha, tipo,cifrado);
 
             MySqlConnection conexion = null;
 
