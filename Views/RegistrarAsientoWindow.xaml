@@ -86,8 +86,8 @@
                        <ComboBox x:Name="cmbMovimiento" Margin="130, 0, 10, 3" VerticalAlignment="Center" FontSize="14"
                                  BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                            <!-- Aquí puedes agregar elementos al ComboBox -->
-                           <ComboBoxItem Content="Egreso"/>
-                           <ComboBoxItem Content="Ingreso"/>
+                           <ComboBoxItem Content="DEBITAR"/>
+                           <ComboBoxItem Content="ACREDITAR"/>
                        </ComboBox>
                    </Grid>
                </Border>
