@@ -45,63 +45,56 @@ namespace GlobalLabIII.Blockchain
                 HashActual = hashBuilder.ToString();
             }
         }
-        public void CifrarDatos(string clave)
+
+        public string CifrarDatos(string clave)
         {
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = Encoding.UTF8.GetBytes(clave);
-                aesAlg.IV = new byte[16]; // Vector de inicialización (IV) predeterminado
-
-                // Crear un cifrador para realizar la transformación de entrada
-                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
-
-                // Convertir la cadena de datos a bytes
-                byte[] datosBytes = Encoding.UTF8.GetBytes(Datos);
+                aesAlg.IV = new byte[16]; // Puedes considerar utilizar un IV aleatorio para mayor seguridad
 
                 // Cifrar los datos
-                byte[] datosCifrados = encryptor.TransformFinalBlock(datosBytes, 0, datosBytes.Length);
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            // Escribir los datos cifrados en el flujo de cifrado
+                            swEncrypt.Write($"{Numero}-{FechaCreacion}-{Datos}-{HashAnterior}");
+                        }
+                    }
 
-                // Actualizar la propiedad Datos con los datos cifrados en formato Base64
-                Datos = Convert.ToBase64String(datosCifrados);
-                // Guardar los datos cifrados en el archivo
-                GuardarEnArchivo("datos_cifrados.txt", Convert.ToBase64String(datosCifrados));
-                
-                // Actualizar la propiedad Datos con los datos cifrados en formato Base64
-                Datos = Convert.ToBase64String(datosCifrados);
+                    // Obtener los bytes cifrados
+                    byte[] datosCifrados = msEncrypt.ToArray();
+
+                    // Convertir los bytes cifrados a una cadena hexadecimal
+                    return BitConverter.ToString(datosCifrados).Replace("-", "");
+                }
             }
         }
 
-        public void DescifrarDatos(string clave)
+        public string DescifrarDatos(string clave, string datosCifrados)
         {
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = Encoding.UTF8.GetBytes(clave);
-                aesAlg.IV = new byte[16]; // Vector de inicialización (IV) predeterminado
+                aesAlg.IV = new byte[16]; // Puedes generar un IV único o utilizar un esquema de generación seguro
 
-                // Crear un descifrador para realizar la transformación de entrada
                 ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
-                // Convertir la cadena de datos cifrados a bytes
-                byte[] datosCifrados = Convert.FromBase64String(Datos);
-
-                // Descifrar los datos
-                byte[] datosDescifrados = decryptor.TransformFinalBlock(datosCifrados, 0, datosCifrados.Length);
-
-                // Actualizar la propiedad Datos con los datos descifrados
-                Datos = Encoding.UTF8.GetString(datosDescifrados);
-                
-                // Guardar los datos descifrados en el archivo
-                GuardarEnArchivo("datos_descifrados.txt", Encoding.UTF8.GetString(datosDescifrados));
-
-                // Actualizar la propiedad Datos con los datos descifrados
-                Datos = Encoding.UTF8.GetString(datosDescifrados);
+                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(datosCifrados)))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            return srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
             }
-        }
-        
-        private void GuardarEnArchivo(string nombreArchivo, string contenido)
-        {
-            // Guardar la cadena en el archivo
-            File.WriteAllText(nombreArchivo, contenido, Encoding.UTF8);
         }
     }
 }

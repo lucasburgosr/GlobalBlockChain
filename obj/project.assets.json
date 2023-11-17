@@ -1790,11 +1790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Untalwe\\Desktop\\GlobalLabIIIp2\\GlobalLabIII.csproj",
+      "projectUniqueName": "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\GlobalLabIII.csproj",
       "projectName": "GlobalLabIII",
-      "projectPath": "C:\\Users\\Untalwe\\Desktop\\GlobalLabIIIp2\\GlobalLabIII.csproj",
+      "projectPath": "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\GlobalLabIII.csproj",
       "packagesPath": "C:\\Users\\Untalwe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Untalwe\\Desktop\\GlobalLabIIIp2\\obj\\",
+      "outputPath": "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Untalwe\\AppData\\Roaming\\NuGet\\NuGet.Config"

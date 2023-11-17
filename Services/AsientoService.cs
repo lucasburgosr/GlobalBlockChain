@@ -20,10 +20,10 @@ namespace GlobalLabIII.Services
             var bloqueGenesis = new Bloque(0, DateTime.Now, "Bloque Génesis", string.Empty);
 
             // Guardar el bloque génesis en el archivo
-            GuardarBloqueEnArchivo(bloqueGenesis);
+            GuardarBloqueGenesisEnArchivo(bloqueGenesis);
         }
 
-        public static Asiento CrearAsiento(string cuenta, double monto, string movimiento, DateTime fecha)
+        public static Asiento CrearAsiento(string cuenta, double monto, string movimiento, DateTime fecha, string claveCifrado)
         {
             // Obtener el último bloque en la cadena
             var ultimoBloque = ObtenerUltimoBloque();
@@ -32,7 +32,7 @@ namespace GlobalLabIII.Services
             var nuevoBloque = new Bloque(ultimoBloque.Numero + 1, DateTime.Now, $"{cuenta}-{monto}-{movimiento}-{fecha}", ultimoBloque.HashActual);
 
             // Guardar el nuevo bloque en el archivo
-            GuardarBloqueEnArchivo(nuevoBloque);
+            GuardarBloqueEnArchivo(nuevoBloque,claveCifrado);
 
             // Inicializamos por defecto en Activo
             TipoCuenta tipo = TipoCuenta.ACTIVO;
@@ -185,7 +185,18 @@ namespace GlobalLabIII.Services
             }
         }
 
-        private static void GuardarBloqueEnArchivo(Bloque bloque)
+        private static void GuardarBloqueEnArchivo(Bloque bloque, string claveCifrado)
+        {
+            // Cifrar los datos antes de almacenarlos
+            string datosCifrados = bloque.CifrarDatos(claveCifrado);
+
+            // Crear el formato de cadena para el bloque
+            var cadenaBloque = $"{bloque.Numero}|{bloque.FechaCreacion}|{datosCifrados}|{bloque.HashAnterior}|{bloque.HashActual}";
+
+            // Agregar la cadena del bloque al archivo
+            File.AppendAllLines(RutaArchivoBlockchain, new[] { cadenaBloque }, Encoding.UTF8);
+        }
+        private static void GuardarBloqueGenesisEnArchivo(Bloque bloque)
         {
             // Crear el formato de cadena para el bloque
             var cadenaBloque = $"{bloque.Numero}|{bloque.FechaCreacion}|{bloque.Datos}|{bloque.HashAnterior}|{bloque.HashActual}";
