@@ -38,36 +38,37 @@ namespace GlobalLabIII
         }
 
         private List<LibroDiario> ObtenerAsientosDesdeBlockchain()
+{
+    List<LibroDiario> asientos = new List<LibroDiario>();
+
+    foreach (var bloque in blockchain.ObtenerBloques())
+    {
+        // Supongamos que cada bloque tiene un solo asiento
+        var asiento = bloque.Data;
+
+        // Verifica que el asiento no sea null y que tenga datos antes de procesarlo
+        if (asiento != null && !string.IsNullOrEmpty(asiento.Movimiento) && !string.IsNullOrEmpty(asiento.Cuenta))
         {
-            List<LibroDiario> asientos = new List<LibroDiario>();
+            // Determina si es Debe o Haber
+            string operacion = asiento.DebeHaber ? "Debe" : "Haber";
 
-            foreach (var bloque in blockchain.ObtenerBloques())
+            // Crear un LibroDiarioItem a partir del asiento
+            var libroDiarioItem = new LibroDiario
             {
-                // Supongamos que cada bloque tiene un solo asiento
-                var asiento = bloque.Data;
+                Movimiento = asiento.Movimiento,
+                Fecha = asiento.Fecha,
+                Cuenta = asiento.Cuenta,
+                Monto = asiento.Monto,
+                Operacion = operacion
+            };
 
-                // Verifica que el asiento no sea null antes de procesarlo
-                if (asiento != null)
-                {
-                    // Determina si es Debe o Haber
-                    string operacion = asiento.DebeHaber ? "Debe" : "Haber";
-
-                    // Crear un LibroDiarioItem a partir del asiento
-                    var libroDiarioItem = new LibroDiario
-                    {
-                        Movimiento = asiento.Movimiento,
-                        Fecha = asiento.Fecha,
-                        Cuenta = asiento.Cuenta,
-                        Monto = asiento.Monto,
-                        Operacion = operacion
-                    };
-
-                    asientos.Add(libroDiarioItem);
-                }
-            }
-
-            return asientos;
+            asientos.Add(libroDiarioItem);
         }
+    }
+
+    return asientos;
+}
+
 
         private void btnVolver_Click(object sender, RoutedEventArgs e)
         {

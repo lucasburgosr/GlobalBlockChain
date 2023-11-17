@@ -15,7 +15,7 @@
         <Label Content="Libro Diario" FontSize="30" FontWeight="Bold" FontFamily="Georgia" Foreground="#148D8D" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"/>
 
         <!-- DataGrid para mostrar la tabla -->
-        <DataGrid x:Name="dataGridLibroDiario" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,70"
+        <DataGrid x:Name="dataGridLibroDiario"  IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,70"
                   BorderBrush="Black" BorderThickness="1" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
