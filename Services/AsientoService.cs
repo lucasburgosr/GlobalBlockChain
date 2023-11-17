@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -32,93 +33,40 @@ namespace GlobalLabIII.Services
             return asiento;
         }
         
-        public static List<LibroDiario> ObtenerAsientosDesdeBlockchain()
+
+        public static double ConsultarLibroMayor(DateTime fechaInicio, DateTime fechaFinal, List<LibroDiario> asientos)
         {
-            List<LibroDiario> asientos = new List<LibroDiario>();
-            
-            global::Blockchain blockchain = new global::Blockchain();
-
-            foreach (var bloque in blockchain.ObtenerBloques())
-            {
-                // Supongamos que cada bloque tiene un solo asiento
-                var asiento = bloque.Data;
-
-                // Verifica que el asiento no sea null antes de procesarlo
-                if (asiento != null)
-                {
-                    // Determina si es Debe o Haber
-                    string operacion = asiento.DebeHaber ? "Debe" : "Haber";
-
-                    // Crear un LibroDiarioItem a partir del asiento
-                    var libroDiarioItem = new LibroDiario
-                    {
-                        Movimiento = asiento.Movimiento,
-                        Fecha = asiento.Fecha,
-                        Cuenta = asiento.Cuenta,
-                        Monto = asiento.Monto,
-                        Operacion = operacion
-                    };
-
-                    asientos.Add(libroDiarioItem);
-                }
-            }
-            
-            asientos = asientos.OrderBy(asiento => asiento.Fecha).ToList();
-
-            return asientos;
-        }
-
-        public static double ConsultarLibroMayor(DateTime fechaInicio, DateTime fechaFinal)
-        {
-            // Obtener la lista de asientos, puedes ajustar esta lógica según tu implementación
-            var asientos = ObtenerAsientosDesdeBlockchain();
-
             // Filtrar los asientos dentro del rango de fechas especificado
-            var asientosEnRango = asientos.Where(asiento => asiento.Fecha >= fechaInicio && asiento.Fecha <= fechaFinal);
+            asientos = asientos
+                .Where(asiento => asiento.Fecha.Date >= fechaInicio.Date && asiento.Fecha.Date <= fechaFinal.Date)
+                .ToList();
+            
 
             // Calcular el balance sumando los montos de los asientos
-            double balance = asientosEnRango.Sum(asiento => asiento.Monto);
+            double balance = CalcularBalance(asientos);
 
             return balance;
         }
 
-        private static double CalcularBalance(List<Asiento> asientos)
+
+        private static double CalcularBalance(List<LibroDiario> asientos)
         {
-            double balance = 0;
             double DEBE = 0;
             double HABER = 0;
 
             foreach (var asiento in asientos)
             {
-                string movimiento = asiento.Movimiento;
-                TipoCuenta tipo = asiento.TipoCuenta;
-
-                if (movimiento == "Egreso")
+                if (asiento.Operacion == "Debe") //True corresponde al DEBE
                 {
-                    if (tipo == TipoCuenta.PASIVO || tipo == TipoCuenta.PATRIMONIO || tipo == TipoCuenta.RESULTADO_POSITIVO)
-                    {
-                        HABER += asiento.Monto;
-                    }
-                    else
-                    {
-                        HABER -= asiento.Monto;
-                    }
+                    DEBE += asiento.Monto;
                 }
-                else // SI ES UN INGRESO 
+                else //False corresponde al HABER
                 {
-                    if (tipo == TipoCuenta.ACTIVO || tipo == TipoCuenta.RESULTADO_NEGATIVO)
-                    {
-                        DEBE += asiento.Monto;
-                    }
-                    else
-                    {
-                        DEBE -= asiento.Monto;
-                    }
+                    HABER += asiento.Monto; 
                 }
             }
 
-            balance = DEBE - HABER;
-            return balance;
+            return DEBE - HABER;
         }
 
         public static TipoCuenta DeterminarTipoCuenta(string cuenta)

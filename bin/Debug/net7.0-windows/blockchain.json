@@ -1,106 +1,74 @@
 [
   {
     "Index": 0,
-    "Timestamp": "2023-11-17T16:50:33.7422338-03:00",
+    "Timestamp": "2023-11-17T17:53:28.0800484-03:00",
     "PreviousHash": "0",
-    "Hash": "3e5c6ee21a18ebfcf3d7fd382668b4df70a9112c9313c5644c0f8674bd293a4f",
+    "Hash": "9d456732ad48a90e7f5ab7f1a88ff0dc61705fb16bab6020739b45057d8ac2e1",
     "Mensaje": "Bloque genesis",
     "Data": null
   },
   {
     "Index": 1,
-    "Timestamp": "2023-11-17T16:50:33.744767-03:00",
-    "PreviousHash": "3e5c6ee21a18ebfcf3d7fd382668b4df70a9112c9313c5644c0f8674bd293a4f",
-    "Hash": "f6f2b08549128a7aacac95557240d4fe800d8092da77ac7caeaec29499369dde",
+    "Timestamp": "2023-11-17T17:53:28.0973638-03:00",
+    "PreviousHash": "9d456732ad48a90e7f5ab7f1a88ff0dc61705fb16bab6020739b45057d8ac2e1",
+    "Hash": "fbac3c1f7f1fbd4f8351b3ca1b952bdeca40863f30aa372b9c23a97e9dc0ea9b",
     "Mensaje": "Nuevo bloque",
     "Data": {
       "Id": 0,
-      "Cuenta": "MONEDA EXTRANJERA",
-      "Monto": 214,
+      "Cuenta": "BANCO C/C",
+      "Monto": 500,
       "Movimiento": "DEBITAR",
       "DebeHaber": true,
-      "Fecha": "2023-11-09T00:00:00",
-      "TipoCuenta": 4
+      "Fecha": "2023-11-01T00:00:00",
+      "TipoCuenta": 0
     }
   },
   {
     "Index": 2,
-    "Timestamp": "2023-11-17T17:00:51.9435285-03:00",
-    "PreviousHash": "f6f2b08549128a7aacac95557240d4fe800d8092da77ac7caeaec29499369dde",
-    "Hash": "ea3d1ee1a4df426cc32defa86377c9985aec80e06a37a1a638d421a43e2db509",
+    "Timestamp": "2023-11-17T17:53:35.7291738-03:00",
+    "PreviousHash": "fbac3c1f7f1fbd4f8351b3ca1b952bdeca40863f30aa372b9c23a97e9dc0ea9b",
+    "Hash": "1e845bf03da27b927ebf60460bcc9e15c2b66e6e1c690d0d2932dc2e55529f46",
     "Mensaje": "Nuevo bloque",
     "Data": {
       "Id": 0,
-      "Cuenta": "BANCO C/C",
-      "Monto": 32463,
-      "Movimiento": "ACREDITAR",
-      "DebeHaber": false,
-      "Fecha": "2023-11-03T00:00:00",
-      "TipoCuenta": 0
-    }
-  },
-  {
-    "Index": 3,
-    "Timestamp": "2023-11-17T17:06:15.9720537-03:00",
-    "PreviousHash": "ea3d1ee1a4df426cc32defa86377c9985aec80e06a37a1a638d421a43e2db509",
-    "Hash": "c7566a16d82ab60c327b1470236c4c6a45d353c48e8a86d5da9bb2e12c49c97d",
-    "Mensaje": "Nuevo bloque",
-    "Data": {
-      "Id": 0,
-      "Cuenta": "BANCO C/C",
-      "Monto": 325,
-      "Movimiento": "ACREDITAR",
-      "DebeHaber": false,
-      "Fecha": "2023-10-10T00:00:00",
-      "TipoCuenta": 0
-    }
-  },
-  {
-    "Index": 4,
-    "Timestamp": "2023-11-17T17:06:26.1416236-03:00",
-    "PreviousHash": "c7566a16d82ab60c327b1470236c4c6a45d353c48e8a86d5da9bb2e12c49c97d",
-    "Hash": "8bc5acd16537ad7137dbf0e98508f5748cbb3ee2b004cdd688382d64f560956a",
-    "Mensaje": "Nuevo bloque",
-    "Data": {
-      "Id": 0,
-      "Cuenta": "MONEDA EXTRANJERA",
-      "Monto": 456,
-      "Movimiento": "ACREDITAR",
-      "DebeHaber": false,
-      "Fecha": "2023-10-20T00:00:00",
-      "TipoCuenta": 4
-    }
-  },
-  {
-    "Index": 5,
-    "Timestamp": "2023-11-17T17:06:36.6390871-03:00",
-    "PreviousHash": "8bc5acd16537ad7137dbf0e98508f5748cbb3ee2b004cdd688382d64f560956a",
-    "Hash": "9221d2312ea64899c12ae349cc1640eccc5b02864affd1b3ed90da74e97b49af",
-    "Mensaje": "Nuevo bloque",
-    "Data": {
-      "Id": 0,
-      "Cuenta": "ACREEDORES",
-      "Monto": 456,
+      "Cuenta": "PROVEEDORES",
+      "Monto": 500,
       "Movimiento": "DEBITAR",
       "DebeHaber": true,
-      "Fecha": "2023-09-04T00:00:00",
+      "Fecha": "2023-11-03T00:00:00",
       "TipoCuenta": 1
     }
   },
   {
-    "Index": 6,
-    "Timestamp": "2023-11-17T17:26:22.6005303-03:00",
-    "PreviousHash": "9221d2312ea64899c12ae349cc1640eccc5b02864affd1b3ed90da74e97b49af",
-    "Hash": "671bcc990b6a1cac2b310ecdc9ba44c5e49ae428c60434197f295135895b7646",
+    "Index": 3,
+    "Timestamp": "2023-11-17T17:53:44.2292558-03:00",
+    "PreviousHash": "1e845bf03da27b927ebf60460bcc9e15c2b66e6e1c690d0d2932dc2e55529f46",
+    "Hash": "17686c991c896ff48acab40c6d68e00e08bc06315d248f435336f1cad912089e",
     "Mensaje": "Nuevo bloque",
     "Data": {
       "Id": 0,
-      "Cuenta": "BANCO C/C",
-      "Monto": 1234,
+      "Cuenta": "CAPITAL",
+      "Monto": 500,
       "Movimiento": "ACREDITAR",
       "DebeHaber": false,
-      "Fecha": "2023-11-03T00:00:00",
-      "TipoCuenta": 0
+      "Fecha": "2023-11-05T00:00:00",
+      "TipoCuenta": 2
+    }
+  },
+  {
+    "Index": 4,
+    "Timestamp": "2023-11-17T18:13:58.4162774-03:00",
+    "PreviousHash": "17686c991c896ff48acab40c6d68e00e08bc06315d248f435336f1cad912089e",
+    "Hash": "60f7c82e0fcda9692c65d160b3895d144cc50444434ebe3fd842845785dc5069",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "ACREEDORES",
+      "Monto": 900,
+      "Movimiento": "ACREDITAR",
+      "DebeHaber": false,
+      "Fecha": "2023-11-17T18:13:58.4120934-03:00",
+      "TipoCuenta": 1
     }
   }
 ]
