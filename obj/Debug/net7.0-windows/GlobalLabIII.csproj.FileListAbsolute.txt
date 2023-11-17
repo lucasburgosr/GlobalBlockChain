@@ -227,6 +227,4 @@ C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\ref
 C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.pdb
 C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.genruntimeconfig.cache
 C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\ref\GlobalLabIII.dll
->>>>>>> Stashed changes
-D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\Views\VerLibroDiarioWindow.baml
-D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\Views\VerLibroDiarioWindow.g.cs
+

@@ -31,8 +31,13 @@ namespace GlobalLabIII
             string cuenta = ((Cuenta)cmbCuenta.SelectedItem).Nombre;
             string movimiento = ((ComboBoxItem)cmbMovimiento.SelectedItem).Content.ToString();
             double monto = double.Parse(textBoxMonto.Text);
+
             string cifrado = "";
             AsientoService.CrearAsiento(cuenta, monto, movimiento, fecha,cifrado);
+
+
+            AsientoService.CrearAsiento(cuenta, monto, movimiento, fecha,cifrado);
+
 
             MessageBox.Show("Registro completado exitosamente", "Registrar Asiento");
         }
