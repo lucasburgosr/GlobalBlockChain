@@ -49,34 +49,7 @@ namespace GlobalLabIII.Services
 
         public static double ConsultarLibroMayor(DateTime fechaInicio, DateTime fechaFinal)
         {
-            MySqlConnection conexion = null;
-
-            try
-            {
-                // Abrir la conexión
-                conexion = DatabaseConfig.Conectar();
-
-                // Verificar que la conexión esté abierta
-                if (conexion == null || conexion.State != System.Data.ConnectionState.Open)
-                {
-                    Console.WriteLine("No se pudo abrir la conexión.");
-                }
-
-                // Llamar a un método de DataAccess para obtener los asientos de ese intervalo de fechas
-                List<Asiento> asientos = DataAccess.ObtenerAsientosPorFecha(conexion, fechaInicio, fechaFinal);
-
-                double balance = CalcularBalance(asientos);
-
-                return balance;
-            }
-            finally
-            {
-                // Asegurarse de cerrar la conexión, incluso si hay errores
-                if (conexion != null)
-                {
-                    DatabaseConfig.Desconectar(conexion);
-                }
-            }
+            return 0;
         }
 
         private static double CalcularBalance(List<Asiento> asientos)
