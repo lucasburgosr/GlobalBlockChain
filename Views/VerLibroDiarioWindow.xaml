@@ -1,0 +1,57 @@
+<Window x:Class="GlobalLabIII.VerLibroDiarioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Libro Diario" Height="450" Width="600">
+    <Grid>
+        <!-- Fondo degradado -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#0E2C40" Offset="0"/> <!-- Violeta más oscuro -->
+                <GradientStop Color="#1A4A5A" Offset="1"/> <!-- Lila más claro -->
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Label "Libro Diario" -->
+        <Label Content="Libro Diario" FontSize="30" FontWeight="Bold" FontFamily="Georgia" Foreground="#148D8D" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0"/>
+
+        <!-- DataGrid para mostrar la tabla -->
+        <DataGrid x:Name="dataGridLibroDiario" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,70"
+                  BorderBrush="Black" BorderThickness="1" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#0E2C40" Offset="0"/> <!-- Violeta más oscuro -->
+                    <GradientStop Color="#1A4A5A" Offset="1"/> <!-- Lila más claro -->
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <!-- Asiento -->
+                <DataGridTextColumn Header="Asiento" Binding="{Binding Asiento}" />
+                <!-- Fecha -->
+                <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
+                <!-- Cuenta -->
+                <DataGridTextColumn Header="Cuenta" Binding="{Binding Cuenta}" />
+                <!-- Monto -->
+                <DataGridTextColumn Header="Monto" Binding="{Binding Monto}" />
+                <!-- Debe -->
+                <DataGridCheckBoxColumn Header="Debe" Binding="{Binding Debe}" />
+                <!-- Haber -->
+                <DataGridCheckBoxColumn Header="Haber" Binding="{Binding Haber}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botón Volver -->
+        <Button Content="Volver" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Margin="0,0,0,20" Click="btnVolver_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#0E2C40"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#0E2C40"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

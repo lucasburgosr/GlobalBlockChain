@@ -50,11 +50,11 @@ namespace WpfApp
         
         private void btnVerLibroDiario_Click(object sender, RoutedEventArgs e)
         {
-            // Crear una instancia de la ventana Plan De Cuentas
-            PlanDeCuentasWindow planDeCuentasWindow = new PlanDeCuentasWindow();
+            // Crear una instancia de la ventana Ver Libro Diario
+            VerLibroDiarioWindow verLibroDiarioWindow = new VerLibroDiarioWindow();
 
             // Mostrar la ventana LibroMayorWindow
-            planDeCuentasWindow.Show();
+            verLibroDiarioWindow.Show();
 
             // Cerrar la ventana actual (MainWindow)
             this.Close();
