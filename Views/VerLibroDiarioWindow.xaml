@@ -24,8 +24,8 @@
                 </LinearGradientBrush>
             </DataGrid.Background>
             <DataGrid.Columns>
-                <!-- Asiento -->
-                <DataGridTextColumn Header="Asiento" Binding="{Binding Asiento}" />
+                <!-- Movimiento -->
+                <DataGridTextColumn Header="Movimiento" Binding="{Binding Movimiento}" />
                 <!-- Fecha -->
                 <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
                 <!-- Cuenta -->

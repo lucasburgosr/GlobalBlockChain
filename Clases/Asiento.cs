@@ -16,7 +16,6 @@ public class Asiento
 
     public string Movimiento { get; set; }
     
-
     public DateTime Fecha { get; set; }
     
     public TipoCuenta TipoCuenta { get; set; }

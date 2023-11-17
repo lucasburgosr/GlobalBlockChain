@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj": {}
+    "C:\\Users\\lucaa\\Documents\\Lucas\\Tecnicatura en Programación\\Laboratorio de Computación 3\\GlobalBlockChain\\GlobalLabIII.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj": {
+    "C:\\Users\\lucaa\\Documents\\Lucas\\Tecnicatura en Programación\\Laboratorio de Computación 3\\GlobalBlockChain\\GlobalLabIII.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj",
+        "projectUniqueName": "C:\\Users\\lucaa\\Documents\\Lucas\\Tecnicatura en Programación\\Laboratorio de Computación 3\\GlobalBlockChain\\GlobalLabIII.csproj",
         "projectName": "GlobalLabIII",
-        "projectPath": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj",
-        "packagesPath": "C:\\Users\\Lucia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\obj\\",
+        "projectPath": "C:\\Users\\lucaa\\Documents\\Lucas\\Tecnicatura en Programación\\Laboratorio de Computación 3\\GlobalBlockChain\\GlobalLabIII.csproj",
+        "packagesPath": "C:\\Users\\lucaa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucaa\\Documents\\Lucas\\Tecnicatura en Programación\\Laboratorio de Computación 3\\GlobalBlockChain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lucaa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

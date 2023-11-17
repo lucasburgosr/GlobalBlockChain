@@ -77,8 +77,8 @@ public class Blockchain
         // Serializar y persistir la lista de bloques en un archivo .json
         GuardarBlockchainEnArchivo();
     }
-    
-    private static void CargarBlockchainDesdeArchivo()
+
+    public void CargarBlockchainDesdeArchivo()
     {
         string rutaArchivo = "blockchain.json";
 
@@ -106,6 +106,11 @@ public class Blockchain
         }
 
         return null;
+    }
+    
+    public List<Bloque> ObtenerBloques()
+    {
+        return _blocks;
     }
 
     private static void GuardarBlockchainEnArchivo()
