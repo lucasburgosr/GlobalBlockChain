@@ -13,7 +13,7 @@ namespace GlobalLabIII
     public partial class VerLibroDiarioWindow : Window
     {
         private global::Blockchain blockchain;
-        
+
         public VerLibroDiarioWindow()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace GlobalLabIII
             // Llenar el DataGrid con datos de ejemplo (ajustar según la lógica real)
             CargarDatos();
         }
-        
+
         private void CargarDatos()
         {
             // Crear una instancia de la clase Blockchain
@@ -47,8 +47,9 @@ namespace GlobalLabIII
                 // Supongamos que cada bloque tiene un solo asiento
                 var asiento = bloque.Data;
 
-                // Verifica que el asiento no sea null antes de procesarlo
-                if (asiento != null)
+                // Verifica que el asiento no sea null y que tenga datos antes de procesarlo
+                if (asiento != null && !string.IsNullOrEmpty(asiento.Movimiento) &&
+                    !string.IsNullOrEmpty(asiento.Cuenta))
                 {
                     // Determina si es Debe o Haber
                     string operacion = asiento.DebeHaber ? "Debe" : "Haber";
@@ -62,15 +63,18 @@ namespace GlobalLabIII
                         Monto = asiento.Monto,
                         Operacion = operacion
                     };
-
-                    asientos.Add(libroDiarioItem);
+                    // Verifica que el asiento no sea null antes de procesarlo
+                    if (asiento != null)
+                    {
+                        asientos.Add(libroDiarioItem);
+                    }
                 }
             }
-            
-            asientos = asientos.OrderBy(asiento => asiento.Fecha).ToList();
 
+            asientos = asientos.OrderBy(asiento => asiento.Fecha).ToList();
             return asientos;
         }
+
 
         private void btnVolver_Click(object sender, RoutedEventArgs e)
         {
