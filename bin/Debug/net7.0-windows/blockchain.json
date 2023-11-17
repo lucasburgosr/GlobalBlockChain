@@ -1,0 +1,42 @@
+[
+  {
+    "Index": 0,
+    "Timestamp": "2023-11-17T16:50:33.7422338-03:00",
+    "PreviousHash": "0",
+    "Hash": "3e5c6ee21a18ebfcf3d7fd382668b4df70a9112c9313c5644c0f8674bd293a4f",
+    "Mensaje": "Bloque genesis",
+    "Data": null
+  },
+  {
+    "Index": 1,
+    "Timestamp": "2023-11-17T16:50:33.744767-03:00",
+    "PreviousHash": "3e5c6ee21a18ebfcf3d7fd382668b4df70a9112c9313c5644c0f8674bd293a4f",
+    "Hash": "f6f2b08549128a7aacac95557240d4fe800d8092da77ac7caeaec29499369dde",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "MONEDA EXTRANJERA",
+      "Monto": 214,
+      "Movimiento": "DEBITAR",
+      "DebeHaber": true,
+      "Fecha": "2023-11-09T00:00:00",
+      "TipoCuenta": 4
+    }
+  },
+  {
+    "Index": 2,
+    "Timestamp": "2023-11-17T17:00:51.9435285-03:00",
+    "PreviousHash": "f6f2b08549128a7aacac95557240d4fe800d8092da77ac7caeaec29499369dde",
+    "Hash": "ea3d1ee1a4df426cc32defa86377c9985aec80e06a37a1a638d421a43e2db509",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "BANCO C/C",
+      "Monto": 32463,
+      "Movimiento": "ACREDITAR",
+      "DebeHaber": false,
+      "Fecha": "2023-11-03T00:00:00",
+      "TipoCuenta": 0
+    }
+  }
+]

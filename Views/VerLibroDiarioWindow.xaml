@@ -30,10 +30,10 @@
                 <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" />
                 <!-- Cuenta -->
                 <DataGridTextColumn Header="Cuenta" Binding="{Binding Cuenta}" />
-                <!-- Debe -->
-                <DataGridCheckBoxColumn Header="Debe" Binding="{Binding Monto}" />
-                <!-- Haber -->
-                <DataGridCheckBoxColumn Header="Haber" Binding="{Binding Monto}" />
+                <!-- Monto -->
+                <DataGridTextColumn Header="Monto" Binding="{Binding Monto}" />
+                <!-- Operación -->
+                <DataGridTextColumn Header="Operación" Binding="{Binding Operacion}" />
             </DataGrid.Columns>
         </DataGrid>
 

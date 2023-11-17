@@ -8,6 +8,9 @@ public class LibroDiario
     public DateTime Fecha { get; set; }
     public string Cuenta { get; set; }
     public double Monto { get; set; }
+    
     public bool Debe { get; set; }
-    public bool Haber { get; set; }
+    public string Operacion { get; set; }
+    
 }
+    

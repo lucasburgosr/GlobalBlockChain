@@ -49,6 +49,9 @@ namespace GlobalLabIII
                 // Verifica que el asiento no sea null antes de procesarlo
                 if (asiento != null)
                 {
+                    // Determina si es Debe o Haber
+                    string operacion = asiento.DebeHaber ? "Debe" : "Haber";
+
                     // Crear un LibroDiarioItem a partir del asiento
                     var libroDiarioItem = new LibroDiario
                     {
@@ -56,14 +59,12 @@ namespace GlobalLabIII
                         Fecha = asiento.Fecha,
                         Cuenta = asiento.Cuenta,
                         Monto = asiento.Monto,
-                        Debe = (asiento.TipoCuenta == TipoCuenta.ACTIVO || asiento.TipoCuenta == TipoCuenta.RESULTADO_POSITIVO),
-                        Haber = (asiento.TipoCuenta == TipoCuenta.PASIVO || asiento.TipoCuenta == TipoCuenta.PATRIMONIO || asiento.TipoCuenta == TipoCuenta.RESULTADO_NEGATIVO)
+                        Operacion = operacion
                     };
 
                     asientos.Add(libroDiarioItem);
                 }
             }
-            
 
             return asientos;
         }
