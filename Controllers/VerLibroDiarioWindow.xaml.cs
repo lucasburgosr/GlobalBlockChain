@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using GlobalLabIII.Clases;
 using GlobalLabIII.DAO;
@@ -65,6 +66,8 @@ namespace GlobalLabIII
                     asientos.Add(libroDiarioItem);
                 }
             }
+            
+            asientos = asientos.OrderBy(asiento => asiento.Fecha).ToList();
 
             return asientos;
         }

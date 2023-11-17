@@ -38,5 +38,69 @@
       "Fecha": "2023-11-03T00:00:00",
       "TipoCuenta": 0
     }
+  },
+  {
+    "Index": 3,
+    "Timestamp": "2023-11-17T17:06:15.9720537-03:00",
+    "PreviousHash": "ea3d1ee1a4df426cc32defa86377c9985aec80e06a37a1a638d421a43e2db509",
+    "Hash": "c7566a16d82ab60c327b1470236c4c6a45d353c48e8a86d5da9bb2e12c49c97d",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "BANCO C/C",
+      "Monto": 325,
+      "Movimiento": "ACREDITAR",
+      "DebeHaber": false,
+      "Fecha": "2023-10-10T00:00:00",
+      "TipoCuenta": 0
+    }
+  },
+  {
+    "Index": 4,
+    "Timestamp": "2023-11-17T17:06:26.1416236-03:00",
+    "PreviousHash": "c7566a16d82ab60c327b1470236c4c6a45d353c48e8a86d5da9bb2e12c49c97d",
+    "Hash": "8bc5acd16537ad7137dbf0e98508f5748cbb3ee2b004cdd688382d64f560956a",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "MONEDA EXTRANJERA",
+      "Monto": 456,
+      "Movimiento": "ACREDITAR",
+      "DebeHaber": false,
+      "Fecha": "2023-10-20T00:00:00",
+      "TipoCuenta": 4
+    }
+  },
+  {
+    "Index": 5,
+    "Timestamp": "2023-11-17T17:06:36.6390871-03:00",
+    "PreviousHash": "8bc5acd16537ad7137dbf0e98508f5748cbb3ee2b004cdd688382d64f560956a",
+    "Hash": "9221d2312ea64899c12ae349cc1640eccc5b02864affd1b3ed90da74e97b49af",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "ACREEDORES",
+      "Monto": 456,
+      "Movimiento": "DEBITAR",
+      "DebeHaber": true,
+      "Fecha": "2023-09-04T00:00:00",
+      "TipoCuenta": 1
+    }
+  },
+  {
+    "Index": 6,
+    "Timestamp": "2023-11-17T17:26:22.6005303-03:00",
+    "PreviousHash": "9221d2312ea64899c12ae349cc1640eccc5b02864affd1b3ed90da74e97b49af",
+    "Hash": "671bcc990b6a1cac2b310ecdc9ba44c5e49ae428c60434197f295135895b7646",
+    "Mensaje": "Nuevo bloque",
+    "Data": {
+      "Id": 0,
+      "Cuenta": "BANCO C/C",
+      "Monto": 1234,
+      "Movimiento": "ACREDITAR",
+      "DebeHaber": false,
+      "Fecha": "2023-11-03T00:00:00",
+      "TipoCuenta": 0
+    }
   }
 ]

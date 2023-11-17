@@ -25,35 +25,21 @@
                    <RowDefinition Height="Auto" />
                    <RowDefinition Height="Auto" />
                </Grid.RowDefinitions>
-
-
-
-
+               
                <!-- Fecha de inicio -->
                <TextBlock Grid.Row="0" Text="Fecha de Inicio:" VerticalAlignment="Center" FontSize="18"
                           FontFamily="Elephant" Foreground="White" />
                <DatePicker Grid.Row="0" Margin="160, 15, 0, 15" VerticalAlignment="Center"
                            Name="datePickerInicio" PreviewTextInput="control_fecha" />
-
-
-
-
+               
                <!-- Fecha de fin -->
                <TextBlock Grid.Row="1" Text="Fecha de Fin:" VerticalAlignment="Center" FontSize="18"
                           FontFamily="Elephant" Foreground="White" />
                <DatePicker Grid.Row="1" Margin="160, 15, 0, 15" VerticalAlignment="Center"
                            Name="datePickerFin"
                            PreviewTextInput="control_fecha" />
-
-
-
-
-
-
+               
            </Grid>
-
-
-
 
            <Button Content="Consultar" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Stretch"
                    Width="150" Height="30" Margin="0,150,0,0" Click="btnConsultar_Click">

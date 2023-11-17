@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using GlobalLabIII.Blockchain;
 using GlobalLabIII.Clases;
@@ -30,10 +31,55 @@ namespace GlobalLabIII.Services
 
             return asiento;
         }
+        
+        public static List<LibroDiario> ObtenerAsientosDesdeBlockchain()
+        {
+            List<LibroDiario> asientos = new List<LibroDiario>();
+            
+            global::Blockchain blockchain = new global::Blockchain();
+
+            foreach (var bloque in blockchain.ObtenerBloques())
+            {
+                // Supongamos que cada bloque tiene un solo asiento
+                var asiento = bloque.Data;
+
+                // Verifica que el asiento no sea null antes de procesarlo
+                if (asiento != null)
+                {
+                    // Determina si es Debe o Haber
+                    string operacion = asiento.DebeHaber ? "Debe" : "Haber";
+
+                    // Crear un LibroDiarioItem a partir del asiento
+                    var libroDiarioItem = new LibroDiario
+                    {
+                        Movimiento = asiento.Movimiento,
+                        Fecha = asiento.Fecha,
+                        Cuenta = asiento.Cuenta,
+                        Monto = asiento.Monto,
+                        Operacion = operacion
+                    };
+
+                    asientos.Add(libroDiarioItem);
+                }
+            }
+            
+            asientos = asientos.OrderBy(asiento => asiento.Fecha).ToList();
+
+            return asientos;
+        }
 
         public static double ConsultarLibroMayor(DateTime fechaInicio, DateTime fechaFinal)
         {
-            return 0;
+            // Obtener la lista de asientos, puedes ajustar esta lógica según tu implementación
+            var asientos = ObtenerAsientosDesdeBlockchain();
+
+            // Filtrar los asientos dentro del rango de fechas especificado
+            var asientosEnRango = asientos.Where(asiento => asiento.Fecha >= fechaInicio && asiento.Fecha <= fechaFinal);
+
+            // Calcular el balance sumando los montos de los asientos
+            double balance = asientosEnRango.Sum(asiento => asiento.Monto);
+
+            return balance;
         }
 
         private static double CalcularBalance(List<Asiento> asientos)
