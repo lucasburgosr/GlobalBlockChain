@@ -143,6 +143,7 @@ C:\Users\Untalwe\Desktop\GlobalLabIIIp2\obj\Debug\net7.0-windows\refint\GlobalLa
 C:\Users\Untalwe\Desktop\GlobalLabIIIp2\obj\Debug\net7.0-windows\GlobalLabIII.pdb
 C:\Users\Untalwe\Desktop\GlobalLabIIIp2\obj\Debug\net7.0-windows\GlobalLabIII.genruntimeconfig.cache
 C:\Users\Untalwe\Desktop\GlobalLabIIIp2\obj\Debug\net7.0-windows\ref\GlobalLabIII.dll
+<<<<<<< Updated upstream
 D:\AA3er Semestre\Prog3\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.exe
 D:\AA3er Semestre\Prog3\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.deps.json
 D:\AA3er Semestre\Prog3\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.runtimeconfig.json
@@ -183,3 +184,47 @@ D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\refint\GlobalL
 D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.pdb
 D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.genruntimeconfig.cache
 D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\ref\GlobalLabIII.dll
+=======
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.exe
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.deps.json
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.runtimeconfig.json
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\GlobalLabIII.pdb
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\Google.Protobuf.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\MySql.Data.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\System.IO.Pipelines.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\ZstdSharp.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\bin\Debug\net7.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.csproj.AssemblyReference.cache
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\ConsultarLibroMayorWindow.baml
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\MainWindow.baml
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\PlanDeCuentas.baml
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\RegistrarAsientoWindow.baml
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\VerLibroDiarioWindow.baml
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\ConsultarLibroMayorWindow.g.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\MainWindow.g.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\PlanDeCuentas.g.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\RegistrarAsientoWindow.g.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\Views\VerLibroDiarioWindow.g.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII_MarkupCompile.cache
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.g.resources
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.AssemblyInfoInputs.cache
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.AssemblyInfo.cs
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.csproj.CoreCompileInputs.cache
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.csproj.CopyComplete
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\refint\GlobalLabIII.dll
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.pdb
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\GlobalLabIII.genruntimeconfig.cache
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\ref\GlobalLabIII.dll
+>>>>>>> Stashed changes

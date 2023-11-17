@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
+<<<<<<< Updated upstream
 D:\AA3er Semestre\Prog3\GlobalBlockChain\obj\Debug\net7.0-windows\
+=======
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\obj\Debug\net7.0-windows\
+>>>>>>> Stashed changes
 GlobalLabIII
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+<<<<<<< Updated upstream
 D:\AA3er Semestre\Prog3\GlobalBlockChain\App.xaml
 4816958094
+=======
+C:\Users\Lucia\OneDrive\Escritorio\GlobalBlockChain\App.xaml
+5115507342
+>>>>>>> Stashed changes
 
-14-1628743064
-20651956590
-Views\ConsultarLibroMayorWindow.xaml;Views\MainWindow.xaml;Views\PlanDeCuentas.xaml;Views\RegistrarAsientoWindow.xaml;
+15932781970
+206-425864159
+Views\ConsultarLibroMayorWindow.xaml;Views\MainWindow.xaml;Views\PlanDeCuentas.xaml;Views\RegistrarAsientoWindow.xaml;Views\VerLibroDiarioWindow.xaml;
 
 False
 

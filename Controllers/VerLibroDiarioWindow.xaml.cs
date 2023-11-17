@@ -16,23 +16,21 @@ namespace GlobalLabIII
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
             // Llenar el DataGrid con datos de ejemplo (ajustar según la lógica real)
-            CargarDatosDeEjemplo();
+            CargarDatosAsientos();
         }
 
-        private void CargarDatosDeEjemplo()
+        private void CargarDatosAsientos()
         {
             // Aquí debes tener la lógica para obtener los asientos desde la base de datos
             // Estos son datos de ejemplo, debes reemplazarlos con tu lógica real
-            List<Asiento> asientos = ObtenerAsientosDeEjemplo();
+            List<Asiento> asientos = ObtenerAsientos();
 
             // Asignar la lista de asientos al DataGrid
             dataGridLibroDiario.ItemsSource = asientos;
         }
 
-        private List<Asiento> ObtenerAsientosDeEjemplo()
+        private List<Asiento> ObtenerAsientos()
         {
-            // Aquí debes tener la lógica para obtener los asientos desde la base de datos
-            // Estos son datos de ejemplo, debes reemplazarlos con tu lógica real
             List<Asiento> asientos = new List<Asiento>
             {
                 // Agregar más asientos según tu lógica

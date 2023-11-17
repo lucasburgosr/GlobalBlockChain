@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\GlobalLabIII.csproj": {}
   },
   "projects": {
@@ -12,14 +13,29 @@
         "projectPath": "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\GlobalLabIII.csproj",
         "packagesPath": "C:\\Users\\Untalwe\\.nuget\\packages\\",
         "outputPath": "D:\\AA3er Semestre\\Prog3\\GlobalBlockChain\\obj\\",
+=======
+    "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj",
+        "projectName": "GlobalLabIII",
+        "projectPath": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\GlobalLabIII.csproj",
+        "packagesPath": "C:\\Users\\Lucia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucia\\OneDrive\\Escritorio\\GlobalBlockChain\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Untalwe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

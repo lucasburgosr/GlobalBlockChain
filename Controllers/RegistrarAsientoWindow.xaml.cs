@@ -32,7 +32,7 @@ namespace GlobalLabIII
             string movimiento = ((ComboBoxItem)cmbMovimiento.SelectedItem).Content.ToString();
             double monto = double.Parse(textBoxMonto.Text);
 
-            AsientoService.crearAsiento(cuenta, monto, movimiento, fecha);
+            AsientoService.CrearAsiento(cuenta, monto, movimiento, fecha);
 
             MessageBox.Show("Registro completado exitosamente", "Registrar Asiento");
         }

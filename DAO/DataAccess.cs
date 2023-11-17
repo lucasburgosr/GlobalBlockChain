@@ -25,7 +25,8 @@ public class DataAccess
                     {
                         Id = Convert.ToInt32(reader["Id"]),
                         Nombre = Convert.ToString(reader["Nombre"]),
-                        TipoCuenta = (TipoCuenta)Enum.Parse(typeof(TipoCuenta), Convert.ToString(reader["Tipo_de_cuenta"]))
+                        TipoCuenta = (TipoCuenta)Enum.Parse(typeof(TipoCuenta), Convert.ToString(reader["Tipo_de_cuenta"])),
+                        TipoCuentaString = Convert.ToString(reader["Tipo_de_Cuenta"])
                     };
 
                     cuentas.Add(cuenta);
