@@ -1,0 +1,90 @@
+<Window x:Class="GlobalLabIII.ConsultarLibroMayorWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Consulta Libro Mayor" Height="300" Width="400">
+   <Grid>
+       <!-- Fondo degradado -->
+       <Grid.Background>
+           <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+               <GradientStop Color="#0E2C40" Offset="0" /> <!-- Violeta más oscuro -->
+               <GradientStop Color="#1A4A5A" Offset="1" /> <!-- Lila más claro -->
+           </LinearGradientBrush>
+       </Grid.Background>
+
+
+       <Grid Margin="20">
+           <!-- Título -->
+           <Label Content="Libro Mayor" FontSize="24" FontWeight="Bold" FontFamily="Georgia" Foreground="#148D8D"
+                  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" />
+
+
+           <!-- Formulario de fechas -->
+           <Grid Margin="0,60">
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="Auto" />
+                   <RowDefinition Height="Auto" />
+                   <RowDefinition Height="Auto" />
+               </Grid.RowDefinitions>
+
+
+
+
+               <!-- Fecha de inicio -->
+               <TextBlock Grid.Row="0" Text="Fecha de Inicio:" VerticalAlignment="Center" FontSize="18"
+                          FontFamily="Elephant" Foreground="White" />
+               <DatePicker Grid.Row="0" Margin="160, 15, 0, 15" VerticalAlignment="Center"
+                           Name="datePickerInicio" PreviewTextInput="control_fecha" />
+
+
+
+
+               <!-- Fecha de fin -->
+               <TextBlock Grid.Row="1" Text="Fecha de Fin:" VerticalAlignment="Center" FontSize="18"
+                          FontFamily="Elephant" Foreground="White" />
+               <DatePicker Grid.Row="1" Margin="160, 15, 0, 15" VerticalAlignment="Center"
+                           Name="datePickerFin"
+                           PreviewTextInput="control_fecha" />
+
+
+
+
+
+
+           </Grid>
+
+
+
+
+           <Button Content="Consultar" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Stretch"
+                   Width="150" Height="30" Margin="0,150,0,0" Click="btnConsultar_Click">
+               <Button.Style>
+                   <Style TargetType="Button">
+                       <Setter Property="Background" Value="#0E2C40" />
+                       <Setter Property="Foreground" Value="White" />
+                       <Style.Triggers>
+                           <Trigger Property="IsMouseOver" Value="True">
+                               <Setter Property="Background" Value="#A040A0" />
+                           </Trigger>
+                       </Style.Triggers>
+                   </Style>
+               </Button.Style>
+           </Button>
+
+
+           <Button Content="Volver" FontFamily="Montserrat" FontWeight="Bold" HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom" Width="70" Height="25" Click="btnVolver_Click">
+               <Button.Style>
+                   <Style TargetType="Button">
+                       <Setter Property="Background" Value="#0E2C40" />
+                       <Setter Property="Foreground" Value="White" />
+                       <Style.Triggers>
+                           <Trigger Property="IsMouseOver" Value="True">
+                               <Setter Property="Background" Value="#A040A0" />
+                           </Trigger>
+                       </Style.Triggers>
+                   </Style>
+               </Button.Style>
+           </Button>
+       </Grid>
+   </Grid>
+</Window>

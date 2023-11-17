@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Sistema de Registración Contable" Height="450" Width="400">
+  
+   <Window.Resources>
+       <!-- Estilo de los botones con degradado al hacer hover -->
+       <Style x:Key="LilaButton" TargetType="Button">
+           <Setter Property="Background" Value="#0E2C40"/> <!-- Lila más oscuro -->
+           <Setter Property="Foreground" Value="White"/>
+           <Setter Property="FontWeight" Value="Bold"/>
+           <Setter Property="FontFamily" Value="Montserrat"/>
+           <Setter Property="Width" Value="300"/>
+           <Setter Property="Height" Value="50"/>
+           <Setter Property="Margin" Value="50,10,50,10"/>
+           <Style.Triggers>
+               <Trigger Property="IsMouseOver" Value="True">
+                   <Setter Property="Background" Value="#0E2C40"/> <!-- Lila más claro -->
+               </Trigger>
+           </Style.Triggers>
+       </Style>
+   </Window.Resources>
+
+
+   <Grid>
+       <!-- Fondo degradado -->
+       <Grid.Background>
+           <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+               <GradientStop Color="#0E2C40" Offset="0"/> <!-- Violeta más oscuro -->
+               <GradientStop Color="#1A4A5A" Offset="1"/> <!-- Lila más claro -->
+           </LinearGradientBrush>
+       </Grid.Background>
+
+
+       <!-- Contenido de tu ventana -->
+       <!-- Label en el fondo lila claro -->
+       <Label Content="El Buen Sabor" FontSize="30" FontWeight="Bold" FontFamily="Georgia" Foreground="#148D8D" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0"/>
+
+
+       <!-- Contenedor de Botones -->
+       <StackPanel Width="400" Margin="0,100,0,0">
+           <!-- Botón "Registrar Asiento" -->
+           <Button Content="Registrar Asiento" Style="{StaticResource LilaButton}" Click="btnRegistrarAsiento_Click"/>
+
+
+           <!-- Botón "Consultar Libro Mayor" -->
+           <Button Content="Consultar Libro Mayor" Style="{StaticResource LilaButton}" Click="btnConsultarLibroMayor_Click"/>
+
+
+           <!-- Botón "Plan de Cuentas" -->
+           <Button Content="Plan de Cuentas" Style="{StaticResource LilaButton}" Click="btnPlanDeCuentas_Click"/>
+           
+       </StackPanel>
+
+
+      
+   </Grid>
+</Window>
+
+
+
